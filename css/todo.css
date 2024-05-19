@@ -22,6 +22,7 @@
     width: 100%;
     max-width: 540px;
     background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(15px);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
@@ -69,4 +70,34 @@ input{
     font-size: 15px;
     cursor: pointer;
     border-radius: 30px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-image: url(/images/radio_10914625.png);
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color:#5AA566;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(/images/check_5610944.png);
 }
